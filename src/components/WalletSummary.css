@@ -1,0 +1,33 @@
+.table-title {
+    margin: 0;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+
+.summary-wrapper {
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+.summary-content {
+    background-color: white;
+    margin: 110px 0px 20px 0px;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.26);
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.26);
+}
+
+.summary-table {
+    padding: 10px;
+    width: 100%;
+}
+
+.wallet-address {
+    display: flex;
+    flex-direction: row;
+}
+
+.wallet-balance {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,120 @@
+ul {
+    list-style-type: none;
+}
+
+th, td {
+    text-align: left;
+}
+
+.transaction-item {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.transaction-wrapper {
+    background: white;
+    border-top: 1px solid lightgray;
+}
+
+.transaction-id {
+    padding: 10px;
+    font-weight: 800;
+}
+
+.transaction-hash {
+    float:left;
+    width: 50vw;
+    max-width: 750px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.transaction-date {
+    float: right;
+    text-align: right;
+}
+
+.transaction-date:after {
+    clear: both;
+}
+
+.transaction-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #999;
+}
+
+.inputs-wrapper {
+    padding: 10px;
+}
+
+.inputs {
+    padding: 0;
+    text-align: left;
+}
+
+.arrow {
+    border: 0;
+    padding: 10px;
+    width: 18px;
+    height: 16px;
+}
+
+.outputs-wrapper {
+    padding: 10px;
+}
+
+.outputs {
+    padding: 0;
+}
+
+.output-address {
+    float: left;
+    text-align: left;
+    width: 20vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.output-value {
+    float: right;
+}
+
+.amount-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.transaction-confirmations {
+    color: white;
+    border-radius: 5px;
+    background-color: #337ab7;
+    min-width: 15px;
+    max-width: 100px;
+    padding: 5px 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.transaction-amount {
+    color: white;
+    border-radius: 5px;
+    min-width: 15px;
+    max-width: 100px;
+    padding: 5px 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.received {
+    background-color: #5cb85c;
+}
+
+.sent {
+    background-color: #d9534f;
+}

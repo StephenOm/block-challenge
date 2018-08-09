@@ -1,0 +1,7 @@
+.transactions {
+    max-width: 970px;
+    margin: 0px auto 50px auto;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.26);
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.26);
+}
