@@ -3,6 +3,7 @@ import axios from 'axios';
 import Websocket from 'react-websocket';
 import WalletSummary from './components/WalletSummary';
 import TxList from './components/TxList';
+import loadingImage from './loading.svg'
 import './App.css';
 
 class App extends Component {
@@ -16,6 +17,8 @@ class App extends Component {
       received: null,
       balance: null,
       currentBlockHeight: null,
+      isLoading: false,
+      message: 'Enter an address above to get started',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -24,7 +27,9 @@ class App extends Component {
     event.preventDefault();
     const addressQuery = event.target[0].value;
     const self = this;
-
+    this.setState({
+      isLoading: true,
+    });
     axios.all([
       axios.get('https://blockchain.info/q/getblockcount'),
       axios.get(`https://cors-anywhere.herokuapp.com/https://blockchain.info/rawaddr/${addressQuery}`),
@@ -40,7 +45,13 @@ class App extends Component {
           balance: data.final_balance,
           currentBlockHeight: blockHeight.data,
         });
-      }));
+      }))
+      .catch(e => {
+        this.setState({
+          isLoading: false,
+          message: 'Invalid address :(',
+        });
+      });
   }
 
   handleData(data) {
@@ -64,6 +75,8 @@ class App extends Component {
       received,
       balance,
       txs,
+      isLoading,
+      message,
     } = this.state;
     return (
       <div>
@@ -103,7 +116,15 @@ class App extends Component {
                   : null}
               </div>,
             ]
-            : null
+            : (
+              <div className="enter-address-message">
+                {
+                  isLoading 
+                    ? <img alt="loading" src={loadingImage}/>
+                    : <h2>{message}</h2>
+                }
+              </div>
+            )
         }
       </div>
     );

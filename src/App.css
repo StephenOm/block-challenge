@@ -26,6 +26,17 @@ ul, table, tbody, td, th, tr {
   padding: 0;
 }
 
+form {
+  float: right;
+}
+
+input {
+  border: none;
+  border-radius: 17px;
+  padding: 10px;
+  margin: 4px 20px;
+}
+
 .title-image {
   width: 300px;
   height: 30px;
@@ -45,15 +56,10 @@ ul, table, tbody, td, th, tr {
   font-weight: 800;
 }
 
-form {
-  float: right;
-}
-
-input {
-  border: none;
-  border-radius: 17px;
-  padding: 10px;
-  margin: 4px 20px;
+.enter-address-message {
+  text-align: center;
+  margin-top: 30vh;
+  font-size: 1em;
 }
 
 @keyframes App-logo-spin {
